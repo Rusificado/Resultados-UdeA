@@ -1,10 +1,10 @@
-Resultado Examen de Admisión UdeA - prueba
+Resultado Examen de Admisión UdeA - Maria Fernanda
 ============================================================
 
-Razonamiento Lógico: 8/40 -> 20.00/100
-Comprensión Lectora: 12/40 -> 30.00/100
+Razonamiento Lógico: 14/40 -> 35.00/100
+Comprensión Lectora: 11/40 -> 27.50/100
 
-Total: 25.00/100
+Total: 31.25/100
 
 Respuestas vacías:
   Razonamiento Lógico: 0/40

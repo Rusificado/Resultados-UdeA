@@ -1,10 +1,10 @@
-Resultado Examen de Admisión UdeA - prueba
+Resultado Examen de Admisión UdeA - Valentina Molina
 ============================================================
 
-Razonamiento Lógico: 8/40 -> 20.00/100
-Comprensión Lectora: 12/40 -> 30.00/100
+Razonamiento Lógico: 16/40 -> 40.00/100
+Comprensión Lectora: 8/40 -> 20.00/100
 
-Total: 25.00/100
+Total: 30.00/100
 
 Respuestas vacías:
   Razonamiento Lógico: 0/40

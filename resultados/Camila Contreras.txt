@@ -1,10 +1,10 @@
-Resultado Examen de Admisión UdeA - prueba
+Resultado Examen de Admisión UdeA - Camila Contreras
 ============================================================
 
-Razonamiento Lógico: 8/40 -> 20.00/100
-Comprensión Lectora: 12/40 -> 30.00/100
+Razonamiento Lógico: 7/40 -> 17.50/100
+Comprensión Lectora: 9/40 -> 22.50/100
 
-Total: 25.00/100
+Total: 20.00/100
 
 Respuestas vacías:
   Razonamiento Lógico: 0/40

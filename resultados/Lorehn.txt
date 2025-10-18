@@ -1,10 +1,10 @@
-Resultado Examen de Admisión UdeA - prueba
+Resultado Examen de Admisión UdeA - Lorehn
 ============================================================
 
-Razonamiento Lógico: 8/40 -> 20.00/100
+Razonamiento Lógico: 15/40 -> 37.50/100
 Comprensión Lectora: 12/40 -> 30.00/100
 
-Total: 25.00/100
+Total: 33.75/100
 
 Respuestas vacías:
   Razonamiento Lógico: 0/40

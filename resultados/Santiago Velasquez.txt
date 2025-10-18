@@ -1,10 +1,10 @@
-Resultado Examen de Admisión UdeA - prueba
+Resultado Examen de Admisión UdeA - Santiago Velasquez
 ============================================================
 
 Razonamiento Lógico: 8/40 -> 20.00/100
-Comprensión Lectora: 12/40 -> 30.00/100
+Comprensión Lectora: 15/40 -> 37.50/100
 
-Total: 25.00/100
+Total: 28.75/100
 
 Respuestas vacías:
   Razonamiento Lógico: 0/40

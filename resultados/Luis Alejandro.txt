@@ -1,10 +1,10 @@
-Resultado Examen de Admisión UdeA - prueba
+Resultado Examen de Admisión UdeA - Luis Alejandro
 ============================================================
 
-Razonamiento Lógico: 8/40 -> 20.00/100
-Comprensión Lectora: 12/40 -> 30.00/100
+Razonamiento Lógico: 15/40 -> 37.50/100
+Comprensión Lectora: 10/40 -> 25.00/100
 
-Total: 25.00/100
+Total: 31.25/100
 
 Respuestas vacías:
   Razonamiento Lógico: 0/40
