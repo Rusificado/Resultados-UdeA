@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Resultados Examen de Admisión UdeA - Verificador</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <section class="card form-card">
+      <h1>Resultados Examen de Admisión UdeA</h1>
+      <p class="hint">Ingrese su <strong>nombre</strong> y <strong>primer apellido</strong> tal como aparece en su registro.</p>
+
+      <form id="searchForm" autocomplete="off">
+        <div class="row">
+          <input id="firstName" name="firstName" type="text" placeholder="Nombre" required />
+          <input id="lastName" name="lastName" type="text" placeholder="Primer apellido" required />
+        </div>
+        <button class="btn" type="submit">Consultar resultado</button>
+      </form>
+
+      <div id="msg" role="status" aria-live="polite"></div>
+    </section>
+
+    <section id="previewSection" class="card preview-card hidden">
+      <div class="preview-header">
+        <h2 id="previewTitle">Previsualización</h2>
+        <div class="actions">
+          <button id="printViewBtn" class="btn small">Abrir vista imprimible</button>
+          <button id="clearBtn" class="btn small ghost">Limpiar</button>
+        </div>
+      </div>
+
+      <div id="pdfPreview" class="pdf-preview">
+        <div class="pdf-top">
+          <h3 id="candidateName">Nombre del aspirante</h3>
+          <div id="classAdmission" class="badge">Clase: -</div>
+        </div>
+
+        <div class="scores">
+          <div class="score-row">
+            <div class="label">Razonamiento Lógico</div>
+            <div id="rlScore" class="value">- / 100</div>
+          </div>
+          <div class="score-row">
+            <div class="label">Comprensión Lectora</div>
+            <div id="clScore" class="value">- / 100</div>
+          </div>
+          <div class="score-row total">
+            <div class="label">Total</div>
+            <div id="totalScore" class="value">- / 100</div>
+          </div>
+        </div>
+      </div>
+
+      <p class="note">Solo se muestran: nombre, clase de admisión, puntaje por prueba y puntaje total.</p>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

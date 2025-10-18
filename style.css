@@ -1,0 +1,35 @@
+:root{
+  --bg:#f3fbf6;
+  --card:#ffffff;
+  --green:#0a7a3a;
+  --muted:#6b6b6b;
+  --accent:#cfeee0;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial}
+body{background:var(--bg);display:flex;align-items:center;justify-content:center;padding:32px}
+.container{width:920px;max-width:96%;}
+.card{background:var(--card);border-radius:12px;box-shadow:0 6px 20px rgba(20,40,30,0.06);padding:28px}
+.form-card{margin-bottom:20px}
+h1{color:var(--green);margin:0 0 8px;font-size:28px;text-align:center}
+.hint{color:var(--muted);text-align:center;margin:0 0 18px}
+.row{display:flex;gap:12px;margin-bottom:12px}
+input[type=text]{flex:1;padding:12px 14px;border-radius:8px;border:1px solid #e6efe9;background:#fff}
+.btn{display:inline-block;background:var(--green);color:#fff;padding:12px 18px;border-radius:8px;border:0;font-weight:600;width:100%;cursor:pointer}
+.btn.small{padding:8px 10px;width:auto}
+.btn.ghost{background:transparent;color:var(--green);border:1px solid rgba(10,122,58,0.12)}
+#msg{margin-top:12px;color:#b33}
+.preview-card{position:relative}
+.preview-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.pdf-preview{border:1px solid #e6efe9;padding:18px;border-radius:8px;background:#fff}
+.pdf-top{display:flex;align-items:center;justify-content:space-between}
+#candidateName{margin:0;color:var(--green)}
+.badge{background:var(--accent);padding:6px 10px;border-radius:6px;font-weight:600}
+.scores{margin-top:10px}
+.score-row{display:flex;justify-content:space-between;padding:6px 8px;border-bottom:1px dashed #efefef}
+.score-row.total{font-weight:700}
+.label{color:#445}
+.value{color:#222}
+.note{color:var(--muted);margin-top:12px;font-size:13px}
+.hidden{display:none}
+@media (max-width:600px){.row{flex-direction:column}}
