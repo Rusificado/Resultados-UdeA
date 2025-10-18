@@ -1,0 +1,12 @@
+Resultado Examen de Admisión UdeA - Laura Sofia
+============================================================
+
+Razonamiento Lógico: 25/40 -> 62.50/100
+Comprensión Lectora: 19/40 -> 47.50/100
+
+Total: 55.00/100
+
+Respuestas vacías:
+  Razonamiento Lógico: 0/40
+  Comprensión Lectora: 0/40
+  Total vacías: 0/80
