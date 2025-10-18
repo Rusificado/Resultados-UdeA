@@ -64,7 +64,7 @@ searchForm.addEventListener('submit', async (e) => {
     console.log('DEBUG: candidateFile resolved ->', candidateFile);
 
     if (!candidateFile) {
-      msg.textContent = 'No se encontró un resultado para ese nombre. Si tienes un wordlist/manifest en resultados/, verifica que incluya el nombre y el archivo correcto.';
+      msg.textContent = 'No se encontró un resultado para ese nombre. O el aspirante aún no tiene respuestas subidas en el sistema.';
       return;
     }
 
@@ -497,3 +497,4 @@ function renderPrintableHTML(obj) {
   <div class="row"><strong>Total:</strong><span>${obj.total}</span></div>
   </body></html>`;
 }
+
