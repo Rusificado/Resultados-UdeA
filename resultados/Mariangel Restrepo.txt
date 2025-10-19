@@ -1,0 +1,12 @@
+Resultado Examen de Admisión UdeA - Mariangel Restrepo
+============================================================
+
+Razonamiento Lógico: 21/40 -> 52.50/100
+Comprensión Lectora: 16/40 -> 40.00/100
+
+Total: 46.25/100
+
+Respuestas vacías:
+  Razonamiento Lógico: 2/40
+  Comprensión Lectora: 0/40
+  Total vacías: 2/80

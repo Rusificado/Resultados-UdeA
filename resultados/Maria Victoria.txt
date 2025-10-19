@@ -1,0 +1,12 @@
+Resultado Examen de Admisión UdeA - Maria Victoria
+============================================================
+
+Razonamiento Lógico: 21/40 -> 52.50/100
+Comprensión Lectora: 24/40 -> 60.00/100
+
+Total: 56.25/100
+
+Respuestas vacías:
+  Razonamiento Lógico: 0/40
+  Comprensión Lectora: 1/40
+  Total vacías: 1/80
