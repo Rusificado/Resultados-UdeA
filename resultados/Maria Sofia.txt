@@ -1,0 +1,12 @@
+Resultado Examen de Admisión UdeA - Maria Sofia
+============================================================
+
+Razonamiento Lógico: 22/40 -> 55.00/100
+Comprensión Lectora: 38/40 -> 95.00/100
+
+Total: 75.00/100
+
+Respuestas vacías:
+  Razonamiento Lógico: 0/40
+  Comprensión Lectora: 0/40
+  Total vacías: 0/80
