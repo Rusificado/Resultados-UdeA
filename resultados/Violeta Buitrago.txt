@@ -1,0 +1,12 @@
+Resultado Examen de Admisión UdeA - Violeta Buitrago
+============================================================
+
+Razonamiento Lógico: 22/40 -> 55.00/100
+Comprensión Lectora: 30/40 -> 75.00/100
+
+Total: 65.00/100
+
+Respuestas vacías:
+  Razonamiento Lógico: 0/40
+  Comprensión Lectora: 0/40
+  Total vacías: 0/80
