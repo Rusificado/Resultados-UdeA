@@ -1,0 +1,12 @@
+Resultado Examen de Admisión UdeA - Daniel Navarro
+============================================================
+
+Razonamiento Lógico: 15/40 -> 37.50/100
+Comprensión Lectora: 31/40 -> 77.50/100
+
+Total: 57.50/100
+
+Respuestas vacías:
+  Razonamiento Lógico: 0/40
+  Comprensión Lectora: 0/40
+  Total vacías: 0/80
