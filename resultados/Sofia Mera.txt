@@ -1,0 +1,12 @@
+Resultado Examen de Admisión UdeA - Sofia Mera
+============================================================
+
+Razonamiento Lógico: 24/40 -> 60.00/100
+Comprensión Lectora: 29/40 -> 72.50/100
+
+Total: 66.25/100
+
+Respuestas vacías:
+  Razonamiento Lógico: 0/40
+  Comprensión Lectora: 0/40
+  Total vacías: 0/80
