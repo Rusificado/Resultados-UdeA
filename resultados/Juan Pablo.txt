@@ -1,0 +1,12 @@
+Resultado Examen de Admisión UdeA - Juan Pablo
+============================================================
+
+Razonamiento Lógico: 24/40 -> 60.00/100
+Comprensión Lectora: 28/40 -> 70.00/100
+
+Total: 65.00/100
+
+Respuestas vacías:
+  Razonamiento Lógico: 0/40
+  Comprensión Lectora: 0/40
+  Total vacías: 0/80
