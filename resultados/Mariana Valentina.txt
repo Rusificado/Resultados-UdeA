@@ -1,0 +1,12 @@
+Resultado Examen de Admisión UdeA - Mariana Valentina
+============================================================
+
+Razonamiento Lógico: 23/40 -> 57.50/100
+Comprensión Lectora: 17/40 -> 42.50/100
+
+Total: 50.00/100
+
+Respuestas vacías:
+  Razonamiento Lógico: 0/40
+  Comprensión Lectora: 1/40
+  Total vacías: 1/80
