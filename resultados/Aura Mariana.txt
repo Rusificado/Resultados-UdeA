@@ -1,0 +1,12 @@
+Resultado Examen de Admisión UdeA - Aura Mariana
+============================================================
+
+Razonamiento Lógico: 21/40 -> 52.50/100
+Comprensión Lectora: 28/40 -> 70.00/100
+
+Total: 61.25/100
+
+Respuestas vacías:
+  Razonamiento Lógico: 2/40
+  Comprensión Lectora: 1/40
+  Total vacías: 3/80
