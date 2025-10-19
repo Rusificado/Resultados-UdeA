@@ -1,0 +1,12 @@
+Resultado Examen de Admisión UdeA - Maria Alejandra
+============================================================
+
+Razonamiento Lógico: 16/40 -> 40.00/100
+Comprensión Lectora: 23/40 -> 57.50/100
+
+Total: 48.75/100
+
+Respuestas vacías:
+  Razonamiento Lógico: 0/40
+  Comprensión Lectora: 2/40
+  Total vacías: 2/80
