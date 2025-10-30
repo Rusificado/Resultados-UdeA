@@ -1,0 +1,12 @@
+Resultado Examen de Admisión UdeA - Carold Jhoseth
+============================================================
+
+Razonamiento Lógico: 23/40 -> 57.50/100
+Comprensión Lectora: 35/40 -> 87.50/100
+
+Total: 72.50/100
+
+Respuestas vacías:
+  Razonamiento Lógico: 0/40
+  Comprensión Lectora: 0/40
+  Total vacías: 0/80

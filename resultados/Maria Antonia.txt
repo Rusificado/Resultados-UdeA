@@ -1,0 +1,12 @@
+Resultado Examen de Admisión UdeA - Maria Antonia
+============================================================
+
+Razonamiento Lógico: 16/40 -> 40.00/100
+Comprensión Lectora: 32/40 -> 80.00/100
+
+Total: 60.00/100
+
+Respuestas vacías:
+  Razonamiento Lógico: 0/40
+  Comprensión Lectora: 0/40
+  Total vacías: 0/80
