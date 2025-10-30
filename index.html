@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Resultados Simulacro de Admisión a la UdeA</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    :root{
+      --bg:#f3fbf6;
+      --card:#ffffff;
+      --green:#0a7a3a;
+      --muted:#6b6b6b;
+      --accent:#cfeee0;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial}
+    body{background:var(--bg);display:flex;align-items:center;justify-content:center;padding:32px}
+    .container{width:920px;max-width:96%;}
+    .card{background:var(--card);border-radius:12px;box-shadow:0 6px 20px rgba(20,40,30,0.06);padding:28px}
+    .form-card{margin-bottom:20px}
+    h1{color:var(--green);margin:0 0 8px;font-size:28px;text-align:center}
+    .hint{color:var(--muted);text-align:center;margin:0 0 18px}
+    .row{display:flex;gap:12px;margin-bottom:12px}
+    input[type=text]{flex:1;padding:12px 14px;border-radius:8px;border:1px solid #e6efe9;background:#fff}
+    .btn{display:inline-block;background:var(--green);color:#fff;padding:12px 18px;border-radius:8px;border:0;font-weight:600;width:100%;cursor:pointer;position:relative;transition:transform .12s ease,opacity .12s ease}
+    .btn:active{transform:translateY(1px)}
+    .btn.small{padding:8px 10px;width:auto}
+    .btn.ghost{background:transparent;color:var(--green);border:1px solid rgba(10,122,58,0.12)}
+    .btn[disabled]{opacity:0.9;cursor:wait}
+    /* spinner inside disabled button */
+    .btn[disabled]::after{
+      content:"";
+      position:absolute;
+      right:12px;
+      top:50%;
+      transform:translateY(-50%);
+      width:16px;height:16px;border-radius:50%;border:2px solid rgba(255,255,255,0.25);border-top-color:rgba(255,255,255,0.9);animation:spin .8s linear infinite;
+    }
+    #msg{margin-top:12px;color:#b33}
+    .preview-card{position:relative;overflow:visible}
+    .preview-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+    .pdf-preview{border:1px solid #e6efe9;padding:18px;border-radius:8px;background:#fff;transition:box-shadow .18s ease,transform .18s ease}
+    .pdf-preview.loading{filter:grayscale(.02);pointer-events:none}
+    .pdf-top{display:flex;align-items:center;justify-content:space-between}
+    #candidateName{margin:0;color:var(--green)}
+    .badge{background:var(--accent);padding:6px 10px;border-radius:6px;font-weight:600}
+    .scores{margin-top:10px}
+    .score-row{display:flex;justify-content:space-between;padding:6px 8px;border-bottom:1px dashed #efefef}
+    .score-row.total{font-weight:700}
+    .label{color:#445}
+    .value{color:#222}
+    .note{color:var(--muted);margin-top:12px;font-size:13px}
+    .hidden{display:none}
+
+    /* empty summary básico (mantenido) */
+    .empty-summary {
+      margin-top:12px;
+      padding:10px 12px;
+      border-radius:8px;
+      background:#f7f9f7;
+      border:1px solid #e6efe6;
+      font-size:0.95em;
+      color:#2f4f2f;
+    }
+    .empty-summary h4 { margin:0 0 6px 0; font-size:1em; }
+
+    /* Animaciones */
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    @keyframes fadeInUp {
+      from { opacity:0; transform:translateY(8px); }
+      to   { opacity:1; transform:translateY(0); }
+    }
+
+    @keyframes popIn {
+      from { opacity:0; transform:scale(.98); }
+      60%  { transform:scale(1.02); }
+      to   { opacity:1; transform:scale(1); }
+    }
+
+    @keyframes shimmer {
+      0%{ background-position: -200% 0 }
+      100%{ background-position: 200% 0 }
+    }
+
+    /* ejecutar animación cuando la sección deja de tener la clase hidden */
+    .preview-card:not(.hidden){
+      animation: fadeInUp .28s cubic-bezier(.2,.9,.2,1) both;
+    }
+
+    /* entrada para la tarjeta de inscripción y cuadro de resultados */
+    .preview-card:not(.hidden) #enrollmentCard{ animation: popIn .26s ease both; }
+    .preview-card:not(.hidden) .pdf-preview{ transform:none; box-shadow:0 10px 28px rgba(10,50,30,0.06); }
+
+    /* Skeleton / shimmering effect for score rows while loading (triggered when parent has .loading) */
+    .pdf-preview.loading .score-row .value,
+    .pdf-preview.loading .score-row .label{
+      color:transparent;
+      position:relative;
+      overflow:hidden;
+    }
+    .pdf-preview.loading .score-row .value::after,
+    .pdf-preview.loading .score-row .label::after{
+      content:'';
+      position:absolute;left:0;top:0;right:0;bottom:0;
+      background:linear-gradient(90deg, rgba(255,255,255,0.0) 0%, rgba(200,200,200,0.12) 40%, rgba(255,255,255,0.0) 80%);
+      background-size:200% 100%;
+      animation: shimmer 1.2s linear infinite;
+    }
+
+    /* botón visible como loading cuando deshabilitado (ya hay spinner) */
+    .btn[disabled]{ transform:translateY(0); }
+
+    /* responsive: centrar enrollment en móvil */
+    @media (max-width: 640px) {
+      .preview-card > div { display: block; }
+      #pdfPreview { width: 100%; box-sizing: border-box; }
+      #enrollmentCard { display:block !important; margin-left:auto !important; margin-right:auto !important; margin-top:12px !important; width: calc(100% - 32px) !important; max-width:420px !important; }
+      #enrollmentCard select, #enrollmentCard button { width:100%; box-sizing:border-box; }
+    }
+
+    @media (max-width:600px){.row{flex-direction:column}}
+  </style>
+</head>
+<body>
+  <main class="container" style="padding:20px;max-width:1100px;margin:0 auto;">
+    <section class="card form-card" style="margin-bottom:18px;">
+      <h1>Resultados Simulacro de Admisión a la UdeA</h1>
+      <p class="hint">Ingrese su <strong>nombre</strong> y <strong>primer apellido</strong> tal como aparece en su registro.</p>
+
+      <form id="searchForm" autocomplete="off">
+        <div class="row" style="display:flex;gap:12px;flex-wrap:wrap;">
+          <input id="firstName" name="firstName" type="text" placeholder="Nombre" required style="flex:1;min-width:180px;padding:10px;border-radius:6px;border:1px solid #ddd" />
+          <input id="lastName" name="lastName" type="text" placeholder="Primer apellido" required style="flex:1;min-width:180px;padding:10px;border-radius:6px;border:1px solid #ddd" />
+        </div>
+        <div style="margin-top:12px;">
+          <button class="btn" type="submit" style="background:#0a7a3a;color:#fff;padding:10px 18px;border-radius:8px;border:none;">Consultar resultado</button>
+        </div>
+      </form>
+
+      <div id="msg" role="status" aria-live="polite" style="margin-top:8px;color:#b00;"></div>
+    </section>
+
+    <!-- Preview + inscripción combinadas para que queden bien alineadas -->
+    <section id="previewSection" class="card preview-card hidden" style="display:none;">
+      <div class="preview-header" style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+        <h2 id="previewTitle" style="margin:0;">Previsualización</h2>
+        <div class="actions" style="display:flex;gap:8px;">
+          <button id="printViewBtn" class="btn small" style="padding:6px 10px;border-radius:6px;border:1px solid #ddd">Abrir vista imprimible</button>
+          <button id="clearBtn" class="btn small ghost" style="padding:6px 10px;border-radius:6px;border:1px solid #ddd;background:#fff">Limpiar</button>
+        </div>
+      </div>
+
+      <!-- contenedor flexible para que resultados e inscripción queden lado a lado en pantallas grandes -->
+      <div style="display:flex;flex-wrap:wrap;gap:20px;">
+        <!-- cuadro de resultados -->
+        <div id="pdfPreview" class="pdf-preview" style="flex:1 1 420px;min-width:300px;padding:16px;border-radius:8px;background:#fff;box-shadow:0 1px 6px rgba(0,0,0,0.06);">
+          <div class="pdf-top">
+            <h3 id="candidateName" style="margin:6px 0 4px 0;font-size:18px">Nombre del aspirante</h3>
+            <div id="classAdmission" class="badge" style="margin-bottom:8px;color:#0a7a3a;font-weight:700">Clase: -</div>
+          </div>
+
+          <div class="scores" style="margin-top:6px;">
+            <div class="score-row" style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #f0f0f0;">
+              <div class="label">Razonamiento Lógico</div>
+              <div id="rlScore" class="value">- / 100</div>
+            </div>
+            <div class="score-row" style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #f0f0f0;">
+              <div class="label">Comprensión Lectora</div>
+              <div id="clScore" class="value">- / 100</div>
+            </div>
+            <div class="score-row total" style="display:flex;justify-content:space-between;padding:10px 0;font-weight:700;">
+              <div class="label">Total</div>
+              <div id="totalScore" class="value">- / 100</div>
+            </div>
+
+            <!-- Contenedor para el resumen de respuestas vacías (si existe, script.js lo llenará) -->
+            <div id="emptySummary" class="empty-summary" style="display:none;">&nbsp;</div>
+
+          </div>
+        </div>
+
+        <!-- cuadro de inscripción (se muestra SOLO después de consultar resultado exitoso) -->
+        <div id="enrollmentCard" style="flex:0 1 320px;min-width:280px;padding:16px;border-radius:8px;background:#fff;box-shadow:0 1px 6px rgba(0,0,0,0.06);display:none;">
+          <h3 style="margin-top:0;margin-bottom:8px">Inscribirse a un programa curricular</h3>
+          <p style="font-size:13px;color:#666;margin-top:0;margin-bottom:12px;">Selecciona el programa al que deseas inscribirte. Al inscribir se verificará tu puntaje frente al corte del programa.</p>
+
+          <div style="margin-bottom:10px;">
+            <label for="programSelect" style="display:block;margin-bottom:6px;font-weight:600;">Programa</label>
+            <select id="programSelect" name="programSelect" style="width:100%;padding:10px;border-radius:6px;border:1px solid #ddd;">
+              <option value="">-- Selecciona un programa --</option>
+              <!-- Opciones inyectadas por script.js usando populatePrograms(list) -->
+            </select>
+          </div>
+
+          <div style="display:flex;gap:8px;align-items:center;margin-top:8px;">
+            <button id="enrollBtn" class="btn" type="button" style="flex:1;padding:10px;border-radius:8px;border:none;background:#0a7a3a;color:#fff;">Inscribirme</button>
+          </div>
+
+          <center><div id="enrollMsg" role="status" aria-live="polite" style="margin-top:12px;font-weight:700;"></div> </center>
+        </div> 
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
