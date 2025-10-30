@@ -1,0 +1,12 @@
+Resultado Examen de Admisión UdeA - Miguel Galeano
+============================================================
+
+Razonamiento Lógico: 20/40 -> 50.00/100
+Comprensión Lectora: 36/40 -> 90.00/100
+
+Total: 70.00/100
+
+Respuestas vacías:
+  Razonamiento Lógico: 0/40
+  Comprensión Lectora: 0/40
+  Total vacías: 0/80

@@ -1,0 +1,12 @@
+Resultado Examen de Admisión UdeA - Laura Useche
+============================================================
+
+Razonamiento Lógico: 24/40 -> 60.00/100
+Comprensión Lectora: 27/40 -> 67.50/100
+
+Total: 63.75/100
+
+Respuestas vacías:
+  Razonamiento Lógico: 1/40
+  Comprensión Lectora: 0/40
+  Total vacías: 1/80

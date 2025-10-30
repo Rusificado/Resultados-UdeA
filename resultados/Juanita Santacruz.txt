@@ -1,0 +1,12 @@
+Resultado Examen de Admisión UdeA - Juanita Santacruz
+============================================================
+
+Razonamiento Lógico: 26/40 -> 65.00/100
+Comprensión Lectora: 33/40 -> 82.50/100
+
+Total: 73.75/100
+
+Respuestas vacías:
+  Razonamiento Lógico: 0/40
+  Comprensión Lectora: 0/40
+  Total vacías: 0/80
