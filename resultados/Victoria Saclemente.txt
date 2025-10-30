@@ -1,0 +1,12 @@
+Resultado Examen de Admisión UdeA - Victoria Saclemente
+============================================================
+
+Razonamiento Lógico: 20/40 -> 50.00/100
+Comprensión Lectora: 32/40 -> 80.00/100
+
+Total: 65.00/100
+
+Respuestas vacías:
+  Razonamiento Lógico: 0/40
+  Comprensión Lectora: 0/40
+  Total vacías: 0/80
